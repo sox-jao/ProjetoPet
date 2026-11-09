@@ -1,7 +1,7 @@
 from Clientes import *
 def separador():
     print(50*'-')
-
+#Mudei isso aqui ta 
 clientes = []
 while True:
     print('####----SISTEMA PETSHOP----####')
