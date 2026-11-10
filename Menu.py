@@ -41,7 +41,13 @@ while True:
                 separador()
                 
     elif OpcaoMenuPrincipal == '2': 
-        print('Área em desenvolvimento!')
+        while True:
+            print('####----Gerenciar Clientes----####')
+            print('1- Cadastrar novo Animal.\n2- Lista de Animais.\n3- Quantidade de Animais cadastrados.\n0- Voltar ao menu inicial.')
+            print(50* '-=')
+            OpcaoMenuAnimal = input('Digite a opção: ')
+
+
     elif OpcaoMenuPrincipal == '3':
         print('Área em desenvolvimento!')
     elif OpcaoMenuPrincipal == '0':
