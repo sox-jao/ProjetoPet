@@ -1,6 +1,6 @@
 import Clientes
 def separador():
-    print(50*'-')
+    print(f'\n{50*'-'}\n')
 
 clientes = Clientes.carregarClientes()
 while True:
@@ -9,20 +9,26 @@ while True:
     '\n2- Gerenciar animais.' \
     '\n3- Gerenciar produtos.' \
     '\n0- Sair.')
-    print(50* '-=')
+    
+    separador()
     
     OpcaoMenuPrincipal = input('Digite a opção: ').strip()
     
+    separador()
+
     if OpcaoMenuPrincipal == '1':
         while True:
             print('####----Gerenciar Clientes----####')
             print('1- Cadastrar novo cliente.' \
-            '\n2- Lista clientes.' \
+            '\n2- Listar clientes.' \
             '\n3- Quantidade de clientes cadastrados.' \
-            '\n4- Atualizar Cliente.'
+            '\n4- Atualizar Cliente.' \
+            '\n5- Excluir cliente.'
             '\n0- Voltar ao menu inicial.')
-            print(50* '-=')
+            separador()
+            
             OpcaoMenuCliente = input('Digite a opção: ')
+            separador()
             
             if OpcaoMenuCliente == '1':
                 cliente = Clientes.registrarCliente()
@@ -38,7 +44,15 @@ while True:
             elif OpcaoMenuCliente == '3':
                 Clientes.contarClientes(clientes)
                 separador()
-            
+
+            elif OpcaoMenuCliente == '4':
+                Clientes.atualizarClientes(clientes)
+                separador()
+
+            elif OpcaoMenuCliente == '5':
+                Clientes.deletarCliente(clientes)
+                separador()
+                
             elif OpcaoMenuCliente == '0': 
                 print('Voltando!')
                 separador()
