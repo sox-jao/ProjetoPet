@@ -171,7 +171,7 @@ def deletarCliente(lista):
                     
                     print('###--Comfirme--###')
                     print('Deseja mesmo excluir esse cliente?')
-                    print('1- SIM\n2- NÃO\n0- Voltar')
+                    print('1- SIM\n2- NÃO, escolher outro cliente\n0- Voltar')
                     opcao = input('Digite a opção: ')
                     if opcao == '1':
                         lista.pop(indice)
